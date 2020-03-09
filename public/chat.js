@@ -1,4 +1,5 @@
-let socket = io.connect('http://localhost:3001')
+let port = process.env.PORT || 3001
+let socket = io.connect(`ws://socket-chat-practice.herokuapp.com:${port}/`)
 
 let username = $('#username'),
     message = $('#message'),
