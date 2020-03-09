@@ -1,8 +1,9 @@
 let express = require('express')
 let socket = require('socket.io')
 let app = express()
-let server = app.listen(process.env.PORT || 3001, () => {
-    console.log('listening to port 3001')
+let port = process.env.PORT || 3001
+let server = app.listen(port , () => {
+    console.log(`listening to port ${port}`)
 })
 
 app.use(express.static(__dirname + 'public'))
