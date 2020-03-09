@@ -1,7 +1,7 @@
 let express = require('express')
 let socket = require('socket.io')
 let app = express()
-let server = app.listen(3001, () => {
+let server = app.listen(process.env.PORT || 3001, () => {
     console.log('listening to port 3001')
 })
 
