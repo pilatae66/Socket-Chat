@@ -5,7 +5,7 @@ let server = app.listen(3001, () => {
     console.log('listening to port 3001')
 })
 
-app.use(express.static('public'))
+app.use(express.static(__dirname + 'public'))
 
 let io = socket(server)
 io.on('connection', (socket) => {
